@@ -38,7 +38,7 @@ import {
         state(
           'hover',
           style({
-            backgroundColor: '#FAFA11',
+            backgroundColor: 'pink',
           })
         ),
         state(
@@ -62,6 +62,6 @@ export class OpenCloseComponent {
       this.isOpen = !this.isOpen;
   }
   changeColor() {
-    this.isHover = !this.isHover;
+    this.isHover = true;
   }
 }

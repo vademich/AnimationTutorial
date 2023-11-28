@@ -8,8 +8,14 @@
 <div
     [@openClose]="isOpen ? 'open' : 'closed'"
     class="open-close-container"
-    (mouseenter)="changeColor()"
-    [@boxHover]="isHover ? 'hover' : 'not'"
 >
     <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
+</div>
+
+<div 
+    class="box"
+    (mouseenter)="changeColor()"
+    [@boxHover]="isHover ? 'hover' : 'not'"
+>BOX
+    <p class="subscr">(срабатывает только 1 раз)</p>
 </div>

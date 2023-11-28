@@ -8,6 +8,8 @@
 <div
     [@openClose]="isOpen ? 'open' : 'closed'"
     class="open-close-container"
+    (mouseenter)="changeColor()"
+    [@boxHover]="isHover ? 'hover' : 'not'"
 >
     <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
 </div>

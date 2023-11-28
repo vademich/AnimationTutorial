@@ -18,7 +18,7 @@ import {
               style({
                   height: '200px',
                   opacity: 1,
-                  backgroundColor: 'yellow',
+                  backgroundColor: '#FFAA8B',
               })
           ),
           state(
@@ -26,20 +26,42 @@ import {
               style({
                   height: '100px',
                   opacity: 0.8,
-                  backgroundColor: 'blue',
+                  backgroundColor: '#000055',
+                  color: '#FFFFFF',
               })
           ),
           transition('open => closed', [animate('1s')]),
           transition('closed => open', [animate('0.5s')]),
       ]),
+      // ...
+      trigger('boxHover', [
+        state(
+          'hover',
+          style({
+            backgroundColor: '#FAFA11',
+          })
+        ),
+        state(
+          'not',
+          style({
+            backgroundColor: 'brown',
+          })
+        ),
+        transition('hover => not', [animate('1s')]),
+        transition('not => hover', [animate('1s')]),
+      ])
   ],
   templateUrl: 'open-close.component.html',
   styleUrls: ['open-close.component.css'],
 })
 export class OpenCloseComponent {
   isOpen = true;
+  isHover = false;
 
   toggle() {
       this.isOpen = !this.isOpen;
+  }
+  changeColor() {
+    this.isHover = !this.isHover;
   }
 }

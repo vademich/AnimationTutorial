@@ -33,22 +33,15 @@ import {
           transition('open => closed', [animate('1s')]),
           transition('closed => open', [animate('0.5s')]),
       ]),
-      // ...
       trigger('boxHover', [
         state(
           'hover',
           style({
             backgroundColor: 'pink',
+            'transform': 'translateX(500px)',
           })
         ),
-        state(
-          'not',
-          style({
-            backgroundColor: 'brown',
-          })
-        ),
-        transition('hover => not', [animate('1s')]),
-        transition('not => hover', [animate('1s')]),
+        transition('* => hover', [animate('1s')]),
       ])
   ],
   templateUrl: 'open-close.component.html',

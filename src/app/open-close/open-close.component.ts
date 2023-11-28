@@ -1,11 +1,10 @@
-import { Component, HostBinding } from '@angular/core';
+import { Component } from '@angular/core';
 import {
   trigger,
   state,
   style,
   animate,
-  transition,
-  // ...
+  transition
 } from '@angular/animations';
 
 @Component({
